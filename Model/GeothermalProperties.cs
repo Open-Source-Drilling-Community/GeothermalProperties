@@ -37,6 +37,11 @@ namespace NORCE.Drilling.GeothermalProperties.Model
         public DateTimeOffset? LastModificationDate { get; set; }
 
         /// <summary>
+        /// Type of the geothermal properties table. Raw data or processed.
+        /// </summary>
+        public TableType TableType { get; set; }
+
+        /// <summary>
         /// a parameter defined as a Gaussian distribution 
         /// </summary>
         public List<GeothermalData>? GeothermalDataList { get; set; }

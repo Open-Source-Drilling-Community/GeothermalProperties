@@ -42,6 +42,7 @@ namespace NORCE.Drilling.GeothermalProperties.ModelShared
 				Description = "Default Description",
 				CreationDate = DateTimeOffset.UtcNow,
 				LastModificationDate = DateTimeOffset.UtcNow,
+				TableType = (TableType)0,
 				GeothermalDataList = new List<GeothermalData>
 					{
 						ConstructGeothermalData(),
@@ -59,6 +60,7 @@ namespace NORCE.Drilling.GeothermalProperties.ModelShared
 				LastModificationDate = DateTimeOffset.UtcNow,
 				ReferenceGeothermalProperties = ConstructGeothermalProperties(),
 				CompletedGeothermalProperties = ConstructGeothermalProperties(),
+				InterpolationStep = 0.0, 
 				CompletionMethod = (CompletionMethod)0,
 			};
 		}

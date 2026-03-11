@@ -37,7 +37,14 @@ namespace NORCE.Drilling.GeothermalProperties.Model
         /// an input list of GeothermalProperties
         /// </summary>
         public GeothermalProperties? ReferenceGeothermalProperties { get; set; }
+        /// <summary>
+        /// an output list of GeothermalProperties
+        /// </summary>
         public GeothermalProperties CompletedGeothermalProperties { get; set; }
+        /// <summary>
+        /// The vertical depth step for interpolation
+        /// </summary>
+        public double InterpolationStep { get; set; }
 
         /// <summary>
         /// an output parameter, result of the Calculate() method

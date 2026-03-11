@@ -1329,6 +1329,10 @@ namespace NORCE.Drilling.GeothermalProperties.ModelShared
         [System.Text.Json.Serialization.JsonPropertyName("LastModificationDate")]
         public System.DateTimeOffset? LastModificationDate { get; set; }
 
+        [System.Text.Json.Serialization.JsonPropertyName("TableType")]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumConverter<TableType>))]
+        public TableType TableType { get; set; }
+
         [System.Text.Json.Serialization.JsonPropertyName("GeothermalDataList")]
         public System.Collections.Generic.List<GeothermalData> GeothermalDataList { get; set; }
 
@@ -1367,6 +1371,9 @@ namespace NORCE.Drilling.GeothermalProperties.ModelShared
 
         [System.Text.Json.Serialization.JsonPropertyName("CompletedGeothermalProperties")]
         public GeothermalProperties CompletedGeothermalProperties { get; set; }
+
+        [System.Text.Json.Serialization.JsonPropertyName("InterpolationStep")]
+        public double InterpolationStep { get; set; }
 
         [System.Text.Json.Serialization.JsonPropertyName("CompletionMethod")]
         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumConverter<CompletionMethod>))]
@@ -1425,6 +1432,18 @@ namespace NORCE.Drilling.GeothermalProperties.ModelShared
 
         [System.Runtime.Serialization.EnumMember(Value = @"RockFormation")]
         RockFormation = 2,
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.6.2.0 (NJsonSchema v11.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum TableType
+    {
+
+        [System.Runtime.Serialization.EnumMember(Value = @"RawData")]
+        RawData = 0,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"Interpolated")]
+        Interpolated = 1,
 
     }
 

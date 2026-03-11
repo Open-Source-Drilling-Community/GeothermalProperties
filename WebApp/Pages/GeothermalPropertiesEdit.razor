@@ -168,9 +168,8 @@
         int hasDepth = geoData.VerticalDepth != null ? 1:0;
         int hasTemperature = geoData.Temperature != null ? 1:0;
         int hasGradient = geoData.TemperatureGradient != null ? 1:0;
-         
         if (hasDepth + hasTemperature + hasGradient < 2)
-            return "background-color: rgba(255, 99, 71, 0.3)";
+            return "background-color: rgba(255, 99, 71, 0.1)";
 
         return "background-color: white";
     }
@@ -197,6 +196,7 @@
             }
             row += 1;
         }
+
         return true;   
     } 
     //Send message to parent component
@@ -207,11 +207,11 @@
     //Add/Edit panel controls
     private async Task SaveGeothermalProperties()
     {
-        if (!CheckInputsValidity())
-        {
-            Snackbar.Add("Not all rows were properly filled. Check for empty datasets.", Severity.Success);
-            return;
-        }
+        //if (!CheckInputsValidity())
+        //{
+        //    Snackbar.Add("Not all rows were properly filled. Check for empty datasets.", Severity.Success);
+        //    return;
+        //}
         try
         {
             if (GeothermalPropertiesId != null)
@@ -235,11 +235,11 @@
     }
     private async Task SaveAsGeothermalProperties()
     {
-        if (!CheckInputsValidity())
-        {
-            Snackbar.Add("Not all rows were properly filled. Check for empty datasets.", Severity.Success);
-            return;
-        }
+        //if (!CheckInputsValidity())
+        //{
+        //    Snackbar.Add("Not all rows were properly filled. Check for empty datasets.", Severity.Success);
+        //    return;
+        //}
         try
         {
 

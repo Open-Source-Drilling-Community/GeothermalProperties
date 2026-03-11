@@ -475,6 +475,9 @@
             "format": "date-time",
             "nullable": true
           },
+          "TableType": {
+            "$ref": "#/components/schemas/NORCE.Drilling.GeothermalProperties.Model.TableType"
+          },
           "GeothermalDataList": {
             "type": "array",
             "items": {
@@ -515,6 +518,10 @@
           "CompletedGeothermalProperties": {
             "$ref": "#/components/schemas/NORCE.Drilling.GeothermalProperties.Model.GeothermalProperties"
           },
+          "InterpolationStep": {
+            "type": "number",
+            "format": "double"
+          },
           "CompletionMethod": {
             "$ref": "#/components/schemas/NORCE.Drilling.GeothermalProperties.Model.CompletionMethod"
           }
@@ -553,6 +560,13 @@
           "Air",
           "Water",
           "RockFormation"
+        ],
+        "type": "string"
+      },
+      "NORCE.Drilling.GeothermalProperties.Model.TableType": {
+        "enum": [
+          "RawData",
+          "Interpolated"
         ],
         "type": "string"
       },

@@ -1,4 +1,5 @@
-﻿@inject ILogger<MudInputWithUnitAdornment> logger
+﻿@using MudBlazor.Internal
+@inject ILogger<MudInputWithUnitAdornment> logger
 @inject ISnackbar Snackbar
 
 
@@ -15,10 +16,32 @@
             <MudButton StartIcon="@Icons.Material.Filled.Close" Variant="Variant.Filled" IconColor="Color.Error" OnClick="SendMessage">Close</MudButton>                
         </MudToolBar>
         <MudDivider Class="py-1 my-1"/>
-        <MudForm @ref="form" Class="mx-2 my-2">
-            <MudTextField @bind-Value="currentGeothermalPropertiesCompletionOrder.Name" Label="Name" Required="true" For="@(() => currentGeothermalPropertiesCompletionOrder.Name)" />
-            <MudTextField @bind-Value="currentGeothermalPropertiesCompletionOrder.Description" Label="Description" For="@(() => currentGeothermalPropertiesCompletionOrder.Description)" />
-        </MudForm>
+        <MudGrid Class="mx-2 my-2">
+            <MudItem xs="3">
+                <MudTextField @bind-Value="currentGeothermalPropertiesCompletionOrder.Name" Label="Name" Required="true" For="@(() => currentGeothermalPropertiesCompletionOrder.Name)" />
+            </MudItem>
+            <MudItem xs="3">            
+                <MudTextField @bind-Value="currentGeothermalPropertiesCompletionOrder.Description" Label="Description" For="@(() => currentGeothermalPropertiesCompletionOrder.Description)" />
+            </MudItem>
+            <MudItem xs="3">
+                @if (GeothermalPropertiesList != null)
+                {
+                    <MudSelect T="GeothermalProperties" @bind-Value="currentGeothermalPropertiesCompletionOrder.ReferenceGeothermalProperties">
+                        @foreach(GeothermalProperties geothermalProperties in GeothermalPropertiesList)
+                        {
+                            <MudSelectItem Value="@geothermalProperties">@geothermalProperties.Name</MudSelectItem>
+                        }
+                    </MudSelect>
+                }
+            </MudItem>
+            <MudItem xs="3">
+                <MudInputWithUnit
+                    QuantityLabel="Interpolation Step"
+                    QuantityName="DepthDrilling"
+                    SIValue="currentGeothermalPropertiesCompletionOrder.InterpolationStep"
+                    SIValueChanged="val => currentGeothermalPropertiesCompletionOrder.InterpolationStep = val"/>            
+            </MudItem>
+        </MudGrid>
     </MudPaper>
 </MudPaper>
 
@@ -28,17 +51,22 @@
     [Parameter]
     public Guid? GeothermalPropertiesCompletionOrderId { get; set; }
     [Parameter]
+    public List<GeothermalProperties>? GeothermalPropertiesList { get; set; }
+    [Parameter]
     public EventCallback ValueChanged {get; set;}    
 
-
     private GeothermalPropertiesCompletionOrder currentGeothermalPropertiesCompletionOrder = PseudoConstructors.ConstructGeothermalPropertiesCompletionOrder();
-    private MudForm form;
 
     protected override async Task OnInitializedAsync()
     {
         if (GeothermalPropertiesCompletionOrderId != null)
         {
             currentGeothermalPropertiesCompletionOrder = await APIUtils.ClientGeothermalProperties.GetGeothermalPropertiesCompletionOrderByIdAsync(GeothermalPropertiesCompletionOrderId.Value);
+        }
+        if (GeothermalPropertiesList == null)
+        {
+            Snackbar.Add("No geothermal table available", Severity.Warning);
+            await SendMessage();
         }
         await InvokeAsync(() => { StateHasChanged(); });
     }

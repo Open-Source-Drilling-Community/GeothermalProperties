@@ -20,7 +20,7 @@
                          SortMode="SortMode.Multiple" QuickFilter="@_geothermalPropertiesCompletionOrderFilter" Filterable="false"
                          ReadOnly="false" ColumnResizeMode="ResizeMode.Column" Elevation="0">
                 <ToolBarContent>
-                    <MudText Typo="Typo.h6">GeothermalPropertiesCompletionOrder</MudText>
+                    <MudText Typo="Typo.h6">Geothermal Properties Completion</MudText>
                     <MudButton OnClick="@AddGeothermalPropertiesCompletionOrder" Color="@Color.Success" Class="add-item-btn">Add</MudButton>
                     <MudButton OnClick="@DeleteSelectedGeothermalPropertiesCompletionOrder" Color="@Color.Error" Class="add-item-btn">Delete</MudButton>
                     <MudSpacer />
@@ -46,7 +46,7 @@
     }
     @if (isHiddenMainPanel && (!isHiddenEditPanel))
     {
-        <GeothermalPropertiesCompletionOrderEdit GeothermalPropertiesCompletionOrderId="@geothermalPropertiesCompletionOrderIdBeingEdited"  ValueChanged="HandleEditPanelClosed" />
+        <GeothermalPropertiesCompletionOrderEdit GeothermalPropertiesList="@geothermalPropertiesList" GeothermalPropertiesCompletionOrderId="@geothermalPropertiesCompletionOrderIdBeingEdited"  ValueChanged="HandleEditPanelClosed" />
     }
 </MudUnitAndReferenceChoiceTag>
 
@@ -103,14 +103,16 @@
                     }
                     catch (ApiException ex)
                     {
-                        logger.LogError(ex, "Impossible to load GeothermalPropertiesCompletionOrder from client");
+                        logger.LogError(ex, "Impossible to load Geothermal Properties Completion Order from client");
                     }
                 }
                 else if (finishedTask == geothermalPropertiesTask)
                 {
                     try
                     {
-                        geothermalPropertiesList = (List<GeothermalProperties>)await geothermalPropertiesTask; // awaiting the finished task allows to retrieve its result and throw exception if needed
+                        List<GeothermalProperties> geothermalPropertiesListTemporary = (List<GeothermalProperties>)await geothermalPropertiesTask; // awaiting the finished task allows to retrieve its result and throw exception if needed
+                        //Filter and only select Raw Data tables. Interpolated data are not to be post processed again.
+                        geothermalPropertiesList = geothermalPropertiesListTemporary.Where(t => t.TableType == TableType.RawData).ToList();  
                         if (geothermalPropertiesList != null)
                         {
                             geothermalPropertiesList.Sort((f1, f2) => f1.Name.CompareTo(f2.Name));

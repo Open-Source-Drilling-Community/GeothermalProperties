@@ -475,6 +475,9 @@
             "format": "date-time",
             "nullable": true
           },
+          "TableType": {
+            "$ref": "#/components/schemas/TableType"
+          },
           "GeothermalDataList": {
             "type": "array",
             "items": {
@@ -514,6 +517,10 @@
           "CompletedGeothermalProperties": {
             "$ref": "#/components/schemas/GeothermalProperties"
           },
+          "InterpolationStep": {
+            "type": "number",
+            "format": "double"
+          },
           "CompletionMethod": {
             "$ref": "#/components/schemas/CompletionMethod"
           }
@@ -550,6 +557,13 @@
           "Air",
           "Water",
           "RockFormation"
+        ],
+        "type": "string"
+      },
+      "TableType": {
+        "enum": [
+          "RawData",
+          "Interpolated"
         ],
         "type": "string"
       },
