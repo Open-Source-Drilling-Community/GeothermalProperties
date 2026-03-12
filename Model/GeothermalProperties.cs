@@ -42,9 +42,9 @@ namespace NORCE.Drilling.GeothermalProperties.Model
         public TableType TableType { get; set; }
 
         /// <summary>
-        /// a parameter defined as a Gaussian distribution 
+        /// Defines a gethermal table  
         /// </summary>
-        public List<GeothermalData>? GeothermalDataList { get; set; }
+        public List<GeothermalData> GeothermalDataList { get; set; }
      
         /// <summary>
         /// default constructor required for JSON serialization

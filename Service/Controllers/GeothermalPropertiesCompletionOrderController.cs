@@ -15,7 +15,6 @@ namespace NORCE.Drilling.GeothermalProperties.Service.Controllers
     {
         private readonly ILogger<GeothermalPropertiesCompletionOrderManager> _logger;
         private readonly GeothermalPropertiesCompletionOrderManager _geothermalPropertiesCompletionOrderManager;
-
         public GeothermalPropertiesCompletionOrderController(ILogger<GeothermalPropertiesCompletionOrderManager> logger, SqlConnectionManager connectionManager)
         {
             _logger = logger;

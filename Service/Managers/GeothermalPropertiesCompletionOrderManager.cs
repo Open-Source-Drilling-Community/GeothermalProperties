@@ -19,7 +19,7 @@ namespace NORCE.Drilling.GeothermalProperties.Service.Managers
         private static GeothermalPropertiesCompletionOrderManager? _instance = null;
         private readonly ILogger<GeothermalPropertiesCompletionOrderManager> _logger;
         private readonly SqlConnectionManager _connectionManager;
-
+        private static GeothermalPropertiesManager? geothermalPropertiesManager = null;
         private GeothermalPropertiesCompletionOrderManager(ILogger<GeothermalPropertiesCompletionOrderManager> logger, SqlConnectionManager connectionManager)
         {
             _logger = logger;
@@ -31,7 +31,7 @@ namespace NORCE.Drilling.GeothermalProperties.Service.Managers
             _instance ??= new GeothermalPropertiesCompletionOrderManager(logger, connectionManager);
             return _instance;
         }
-
+        
         public int Count
         {
             get
@@ -399,6 +399,42 @@ namespace NORCE.Drilling.GeothermalProperties.Service.Managers
                         catch (SqliteException ex)
                         {
                             _logger.LogError(ex, "Impossible to add the given GeothermalPropertiesCompletionOrder into GeothermalPropertiesCompletionOrderTable");
+                            success = false;
+                        }
+                        try
+                        {
+                            Model.GeothermalProperties? geoData = geothermalPropertiesCompletionOrder.CompletedGeothermalProperties;       
+                            if (geoData != null)
+                            {
+                                //add the GeothermalProperties to the GeothermalPropertiesTable
+                                string metaInfo = JsonSerializer.Serialize(geoData.MetaInfo, JsonSettings.Options);
+                                string data = JsonSerializer.Serialize(geoData, JsonSettings.Options);
+                                var command = connection.CreateCommand();
+                                command.CommandText = "INSERT INTO GeothermalPropertiesTable (" +
+                                    "ID, " +
+                                    "MetaInfo, " +
+                                    "GeothermalProperties" +
+                                    ") VALUES (" +
+                                    $"'{geoData.MetaInfo!.ID}', " +
+                                    $"'{metaInfo}', " +
+                                    $"'{data}'" +
+                                    ")";
+                                int count = command.ExecuteNonQuery();
+                                if (count != 1)
+                                {
+                                    _logger.LogWarning("Impossible to insert the given Geothermal Properties into the GeothermalPropertiesTable");
+                                    success = false;
+                                }                                
+                            }
+                            else
+                            {
+                                _logger.LogError("Impossible to updated interpolated data");
+                                success = false;                                
+                            }
+                        }
+                        catch (SqliteException ex)
+                        {
+                            _logger.LogError(ex, "Impossible to updated interpolated data");
                             success = false;
                         }
                         //finalizing SQL transaction
