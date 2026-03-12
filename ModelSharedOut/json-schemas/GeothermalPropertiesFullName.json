@@ -465,6 +465,16 @@
             "type": "string",
             "nullable": true
           },
+          "WellBoreID": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "TrajectoryID": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
           "CreationDate": {
             "type": "string",
             "format": "date-time",

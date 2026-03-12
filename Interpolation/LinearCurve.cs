@@ -1,10 +1,4 @@
-using OSDC.DotnetLibraries.Drilling.DrillingProperties;
-using OSDC.DotnetLibraries.General.DataManagement;
-using System;
-using System.Collections.Generic;
-
-
-namespace NORCE.Drilling.GeothermalProperties.Model
+namespace NORCE.Drilling.GeothermalProperties.Interpolation
 {
     public class LinearCurve
     {

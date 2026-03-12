@@ -27,6 +27,16 @@ namespace NORCE.Drilling.GeothermalProperties.Model
         public string? Description { get; set; }
 
         /// <summary>
+        /// ID of the WellBore
+        /// </summary>
+        public Guid? WellBoreID { get; set; } = null;
+
+        /// <summary>
+        /// ID of the Trajectory
+        /// </summary>
+        public Guid? TrajectoryID { get; set; } = null;
+
+        /// <summary>
         /// the date when the data was created
         /// </summary>
         public DateTimeOffset? CreationDate { get; set; }

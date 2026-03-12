@@ -26,6 +26,6 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\ModelSharedIn\ModelSharedIn.csproj" />
+	  <ProjectReference Include="..\Interpolation\Interpolation.csproj" />
 	</ItemGroup>
-
 </Project>

@@ -3,7 +3,7 @@ using Parlot.Fluent;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using NORCE.Drilling.GeothermalProperties.Interpolation;
 namespace NORCE.Drilling.GeothermalProperties.Model
 {   
 
