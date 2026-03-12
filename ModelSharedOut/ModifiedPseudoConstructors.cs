@@ -34,7 +34,7 @@ namespace NORCE.Drilling.GeothermalProperties.ModelShared
 			};
 		}
 		public static GeothermalProperties ConstructGeothermalProperties()
-		{
+		{	
 			return new GeothermalProperties
 			{
 				MetaInfo = ConstructMetaInfo(),
@@ -45,8 +45,21 @@ namespace NORCE.Drilling.GeothermalProperties.ModelShared
 				TableType = (TableType)0,
 				GeothermalDataList = new List<GeothermalData>
 					{
-						ConstructGeothermalData(),
-					},
+						new GeothermalData
+						{
+							RegionType = GeothermalPropertiesType.Air,
+							Temperature = 293.15,
+							TemperatureGradient = -3,
+							VerticalDepth = 0,
+						},
+						new GeothermalData
+						{
+							RegionType = GeothermalPropertiesType.RockFormation,
+							Temperature = 303.15,
+							TemperatureGradient = 4,
+							VerticalDepth = 20,
+						}
+					}					
 			};
 		}
 		public static GeothermalPropertiesCompletionOrder ConstructGeothermalPropertiesCompletionOrder()
@@ -60,7 +73,7 @@ namespace NORCE.Drilling.GeothermalProperties.ModelShared
 				LastModificationDate = DateTimeOffset.UtcNow,
 				ReferenceGeothermalProperties = ConstructGeothermalProperties(),
 				CompletedGeothermalProperties = ConstructGeothermalProperties(),
-				InterpolationStep = 0.0, 
+				InterpolationStep = 10.0, 
 				CompletionMethod = (CompletionMethod)0,
 			};
 		}

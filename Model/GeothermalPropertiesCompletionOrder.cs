@@ -69,6 +69,10 @@ namespace NORCE.Drilling.GeothermalProperties.Model
         public bool Calculate()
         {
             bool success = false;
+            if (InterpolationStep <= 0)
+            {
+                return success;
+            }
             if (ReferenceGeothermalProperties != null)
             {   
                 //Create a base instance for the geothermal data

@@ -23,17 +23,31 @@ namespace NORCE.Drilling.GeothermalProperties.ModelTest
             MetaInfo metaInfo2 = new() { ID = guid2 };
             DateTimeOffset creationDate2 = DateTimeOffset.UtcNow;
             ScalarDrillingProperty derivedData1Param = new() { DiracDistributionValue = new DiracDistribution() { Value = 2.0 } };
-            Model.DerivedData1 derivedData1 = new() { DerivedData1Param = derivedData1Param };
-            GeothermalProperties geothermalProperties = new()
+            Model.GeothermalProperties geothermalProperties = new()
             {
                 MetaInfo = metaInfo2,
                 Name = "My test GeothermalProperties name",
                 Description = "My test GeothermalProperties for POST",
                 CreationDate = creationDate,
                 LastModificationDate = creationDate2,
-                GeothermalPropertiesParam = new ScalarDrillingProperty() { DiracDistributionValue = new DiracDistribution() { Value = 1.0 } },
-                DerivedData1 = derivedData1,
-                Type = GeothermalPropertiesType.DerivedData1
+                TableType = (TableType)0,
+                GeothermalDataList = new List<GeothermalData>
+					{
+						new GeothermalData
+						{
+							RegionType = GeothermalPropertiesType.Air,
+							Temperature = 293.15,
+							TemperatureGradient = -3,
+							VerticalDepth = 0,
+						},
+						new GeothermalData
+						{
+							RegionType = GeothermalPropertiesType.RockFormation,
+							Temperature = 303.15,
+							TemperatureGradient = 4,
+							VerticalDepth = 20,
+						}
+					}		
             };
             Model.GeothermalPropertiesCompletionOrder geothermalPropertiesCompletionOrder = new()
             {
@@ -42,12 +56,13 @@ namespace NORCE.Drilling.GeothermalProperties.ModelTest
                 Description = "My test GeothermalPropertiesCompletionOrder",
                 CreationDate = creationDate,
                 LastModificationDate = creationDate,
-                GeothermalPropertiesList = [geothermalProperties],
+                InterpolationStep = 10,
+                ReferenceGeothermalProperties = geothermalProperties,
             };
 
-            Assert.That(geothermalPropertiesCompletionOrder.OutputParam, Is.Null);
-            geothermalPropertiesCompletionOrder.Calculate();
-            Assert.That(geothermalPropertiesCompletionOrder.OutputParam, Is.EqualTo(3));
+  
+            bool success = geothermalPropertiesCompletionOrder.Calculate();
+            Assert.That(success);
         }
 
         [OneTimeTearDown]

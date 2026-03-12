@@ -20,67 +20,34 @@
             <MudTextField @bind-Value="currentGeothermalProperties.Description" Label="Description" For="@(() => currentGeothermalProperties.Description)" />
         </MudForm>
     </MudPaper>
-    <MudPaper Class="my-1 mx-1 py-1 my-1">
-        <MudTable T="GeothermalData" Items="currentGeothermalProperties.GeothermalDataList" RowStyleFunc="GetRowStyle">
-            <HeaderContent>
-                <MudTh>Region</MudTh>
-                <MudTh>Vertical Depth [@(Parent!.GetUnitLabel("DepthDrilling"))]</MudTh>
-                <MudTh>Temperature [@(Parent!.GetUnitLabel("TemperatureDrilling"))]</MudTh>
-                <MudTh>Temperature Gradient [@(Parent!.GetUnitLabel("TemperatureGradientPerLengthDrilling"))]</MudTh>
-                <MudTh>
-                    <MudButton StartIcon="@Icons.Material.Filled.Add" Variant="Variant.Filled" IconColor="Color.Tertiary" OnClick="AddTableRow">Add row</MudButton>                    
-                </MudTh>            
-            </HeaderContent>
-            <RowTemplate>
-                <MudTd>
-                    @if (currentGeothermalProperties.GeothermalDataList.IndexOf(context) == 0)
-                    {
-                        <MudText>@context.RegionType.ToString()</MudText>
-                    }
-                    else
-                    {
-                        <MudSelect T="GeothermalPropertiesType" 
-                                   Value="context.RegionType"
-                                   ValueChanged="val => UpdateRegionType(val, context)">
-                            @foreach (GeothermalPropertiesType regionType in Enum.GetValues(typeof(GeothermalPropertiesType)))
-                            {
-                                <MudSelectItem Value="@regionType">@geoTypeToString[regionType]</MudSelectItem>
-                            }
-                        </MudSelect>
-                    }
-                </MudTd>
-                <MudTd>
-                    <MudInputWithUnit
-                        QuantityName = "DepthDrilling"
-                        SIValueNullable = "@context.VerticalDepth"                        
-                        SIValueNullableChanged="val => context.VerticalDepth = val"/>                        
-                </MudTd>
-                <MudTd>
-                    <MudInputWithUnit
-                        QuantityName = "TemperatureDrilling"
-                        SIValueNullable = "@context.Temperature"                        
-                        SIValueNullableChanged="val => context.Temperature = val"/>                        
-                </MudTd>
-                <MudTd>
-                    @if (currentGeothermalProperties.GeothermalDataList.IndexOf(context) == 0)
-                    {
-                        <MudText>Not used</MudText>
-                    }
-                    else
-                    {
-                        <MudInputWithUnit
-                            QuantityName = "TemperatureGradientPerLengthDrilling"
-                            SIValueNullable = "@context.TemperatureGradient"                        
-                            SIValueNullableChanged="val => context.TemperatureGradient = val"/> 
-                    }                       
-                </MudTd>   
-                <MudTd>
-                    <MudButton StartIcon="@Icons.Material.Filled.Delete" Variant="Variant.Filled" IconColor="Color.Secondary" OnClick="val => RemoveTableAtRow(context)"></MudButton>
-                </MudTd>
-            </RowTemplate>
-        </MudTable>
-    
-    </MudPaper>
+    <MudGrid>
+        <MudItem xs="6">
+            <MudPaper Class="my-1 mx-1 py-1 my-1">
+                    <MudTable T="GeothermalData" Items="currentGeothermalProperties.GeothermalDataList" RowStyleFunc="GetRowStyle">
+                        <HeaderContent>
+                            <MudTh>Region</MudTh>
+                            <MudTh>Vertical Depth [@(Parent!.GetUnitLabel("DepthDrilling"))]</MudTh>
+                            <MudTh>Temperature [@(Parent!.GetUnitLabel("TemperatureDrilling"))]</MudTh>
+                            <MudTh>Temperature Gradient [@(Parent!.GetUnitLabel("TemperatureGradientPerLengthDrilling"))]</MudTh>
+                        </HeaderContent>            
+                        <RowTemplate>
+                            <MudTd>
+                                @context.RegionType               
+                            </MudTd>
+                            <MudTd>
+                                @context.VerticalDepth               
+                            </MudTd>
+                            <MudTd>
+                                @context.Temperature                               
+                            </MudTd>
+                            <MudTd>
+                                @context.TemperatureGradient                                                   
+                            </MudTd>   
+                        </RowTemplate>
+                    </MudTable>        
+            </MudPaper>
+        </MudItem>
+    </MudGrid>
 </MudPaper>
 
 @code{
