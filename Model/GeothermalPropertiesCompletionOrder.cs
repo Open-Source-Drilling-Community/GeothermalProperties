@@ -127,7 +127,7 @@ namespace NORCE.Drilling.GeothermalProperties.Model
                 double finalDepth = lines[lines.Count-1].pt1[0];
                 int lineIndex = 0;
                 int maxLine = lines.Count-1;
-                for (double depth = initialDepth; depth < finalDepth + depth; depth += InterpolationStep)
+                for (double depth = initialDepth; depth < finalDepth + InterpolationStep; depth += InterpolationStep)
                 {
                     // Check which line the first point belongs to 
                     lineIndex += (depth > lines[lineIndex].pt1[0]) ? 1:0;
