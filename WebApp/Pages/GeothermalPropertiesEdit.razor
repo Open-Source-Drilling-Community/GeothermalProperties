@@ -15,10 +15,30 @@
             <MudButton StartIcon="@Icons.Material.Filled.Close" Variant="Variant.Filled" IconColor="Color.Error" OnClick="SendMessage">Close</MudButton>                
         </MudToolBar>
         <MudDivider Class="py-1 my-1"/>
-        <MudForm @ref="form" Class="mx-2 my-2">
-            <MudTextField @bind-Value="currentGeothermalProperties.Name" Label="Name" Required="true" For="@(() => currentGeothermalProperties.Name)" />
-            <MudTextField @bind-Value="currentGeothermalProperties.Description" Label="Description" For="@(() => currentGeothermalProperties.Description)" />
-        </MudForm>
+        <MudGrid Class="mx-2 my-2">
+            <MudItem xs = "3">
+                <MudTextField @bind-Value="currentGeothermalProperties.Name" Label="Name" Required="true" For="@(() => currentGeothermalProperties.Name)" />
+            </MudItem>
+            <MudItem xs = "5">
+                <MudTextField @bind-Value="currentGeothermalProperties.Description" Label="Description" For="@(() => currentGeothermalProperties.Description)" />
+            </MudItem>
+            <MudItem xs = "3">
+                <MudSelect T="Guid" @bind-Value="trajectoryId" Label="Trajectory">
+                    @foreach (TrajectoryLight trajectory in trajectories)
+                    {
+                        <MudSelectItem Value="@trajectory.MetaInfo.ID">@trajectory.Name</MudSelectItem>
+                    }
+                </MudSelect>
+            </MudItem>
+            <MudItem xs = "3">
+                <MudSelect T="Guid" Value="wellBoreId" Label="Well Bore">
+                    @foreach (WellBore wellBore in wellBores)
+                    {
+                        <MudSelectItem Value="@wellBore.MetaInfo.ID">@wellBore.Name</MudSelectItem>
+                    }
+                </MudSelect>
+            </MudItem>
+        </MudGrid>
     </MudPaper>
     <MudPaper Class="my-1 mx-1 py-1 my-1">
         <MudTable T="GeothermalData" Items="currentGeothermalProperties.GeothermalDataList" RowStyleFunc="GetRowStyle">
@@ -90,8 +110,32 @@
     public Guid? GeothermalPropertiesId { get; set; }
     [Parameter]
     public EventCallback ValueChanged {get; set;}    
-    private GeothermalProperties currentGeothermalProperties = PseudoConstructors.ConstructGeothermalProperties();
-    private MudForm form = new();
+    private GeothermalProperties currentGeothermalProperties = 
+        new GeothermalProperties
+        {
+            MetaInfo = PseudoConstructors.ConstructMetaInfo(),
+            Name = "Default Geothermal Properties",
+            Description = "",
+            TrajectoryID = null,
+            WellBoreID = null,
+            GeothermalDataList = new List<GeothermalData>
+            {
+                new GeothermalData
+                {
+                    RegionType = GeothermalPropertiesType.Air
+                },
+                new GeothermalData
+                {
+                    RegionType = GeothermalPropertiesType.RockFormation
+                }
+            }
+        };
+    private List<TrajectoryLight> trajectories = new List<TrajectoryLight>();
+    private List<WellBore> wellBores = new List<WellBore>();
+    private Guid trajectoryId;
+    private Guid wellBoreId;
+    
+    private MudForm form = new(); 
     private Dictionary<GeothermalPropertiesType, string> geoTypeToString = new Dictionary<GeothermalPropertiesType, string>
         {
             {GeothermalPropertiesType.Air, "Air"},
@@ -99,6 +143,7 @@
             {GeothermalPropertiesType.RockFormation, "Rock formation"},            
         };
     int waterRegionOccurences;
+  
     private async void UpdateRegionType(GeothermalPropertiesType choice, GeothermalData target)
     {
         //Get index of current instance
@@ -163,6 +208,10 @@
 
     protected override async Task OnInitializedAsync()
     {
+
+        trajectories = await APIUtils.ClientTrajectory.GetAllTrajectoryLightAsync();
+        wellBores = await APIUtils.ClientWellBore.GetAllWellBoreAsync();
+        
         if (GeothermalPropertiesId != null)
         {
             currentGeothermalProperties = await APIUtils.ClientGeothermalProperties.GetGeothermalPropertiesByIdAsync(GeothermalPropertiesId.Value);
@@ -179,6 +228,7 @@
 
         return "background-color: white";
     }
+
     private bool CheckInputsValidity()
     {
         if (ReturnInstancesWithWaterRegion() == 1)
@@ -222,6 +272,8 @@
         {
             if (GeothermalPropertiesId != null)
             {
+                currentGeothermalProperties.TrajectoryID = trajectoryId;
+                currentGeothermalProperties.WellBoreID = wellBoreId;
                 currentGeothermalProperties.LastModificationDate = DateTimeOffset.UtcNow;                            
                 await APIUtils.ClientGeothermalProperties.PutGeothermalPropertiesByIdAsync((Guid) GeothermalPropertiesId, currentGeothermalProperties);
                 Snackbar.Add("GeothermalProperties updated successfully", Severity.Success);
@@ -240,15 +292,11 @@
         }
     }
     private async Task SaveAsGeothermalProperties()
-    {
-        //if (!CheckInputsValidity())
-        //{
-        //    Snackbar.Add("Not all rows were properly filled. Check for empty datasets.", Severity.Success);
-        //    return;
-        //}
+    {        
         try
         {
-
+            currentGeothermalProperties.TrajectoryID = trajectoryId;
+            currentGeothermalProperties.WellBoreID = wellBoreId;
             currentGeothermalProperties.MetaInfo.ID = Guid.NewGuid();
             currentGeothermalProperties.CreationDate = DateTimeOffset.UtcNow;
             currentGeothermalProperties.LastModificationDate = DateTimeOffset.UtcNow;         
