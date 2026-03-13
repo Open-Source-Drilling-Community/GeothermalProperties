@@ -1,4 +1,4 @@
-﻿public static class APIUtils
+public static class APIUtils
 {
     // API parameters
     public static readonly string HostNameGeothermalProperties = NORCE.Drilling.GeothermalProperties.WebApp.Configuration.GeothermalPropertiesHostURL!;
@@ -8,6 +8,18 @@
 
     public static readonly string HostNameUnitConversion = NORCE.Drilling.GeothermalProperties.WebApp.Configuration.UnitConversionHostURL!;
     public static readonly string HostBasePathUnitConversion = "UnitConversion/api/";
+
+    public static readonly string HostNameTrajectory = NORCE.Drilling.GeothermalProperties.WebApp.Configuration.TrajectoryHostURL!;
+    public static readonly string HostBasePathTrajectory = "Trajectory/api/";
+    public static readonly HttpClient HttpClientTrajectory = APIUtils.SetHttpClient(HostNameTrajectory, HostBasePathTrajectory);
+    public static readonly NORCE.Drilling.GeothermalProperties.ModelShared.Client ClientTrajectory = new NORCE.Drilling.GeothermalProperties.ModelShared.Client(APIUtils.HttpClientTrajectory.BaseAddress!.ToString(), APIUtils.HttpClientTrajectory);
+
+    public static readonly string HostNameWellBore = NORCE.Drilling.GeothermalProperties.WebApp.Configuration.WellBoreHostURL!;
+    public static readonly string HostBasePathWellBore = "WellBore/api/";
+    public static readonly HttpClient HttpClientWellBore = APIUtils.SetHttpClient(HostNameWellBore, HostBasePathWellBore);
+    public static readonly NORCE.Drilling.GeothermalProperties.ModelShared.Client ClientWellBore = new NORCE.Drilling.GeothermalProperties.ModelShared.Client(APIUtils.HttpClientWellBore.BaseAddress!.ToString(), APIUtils.HttpClientWellBore);
+
+
 
     // API utility methods
     public static HttpClient SetHttpClient(string host, string microServiceUri)
