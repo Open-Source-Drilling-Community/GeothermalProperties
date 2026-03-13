@@ -21,7 +21,7 @@
         </MudForm>
     </MudPaper>
     <MudGrid>
-        <MudItem xs="12">
+        <MudItem xs="6">
             <MudPaper Class="my-1 mx-1 py-1 my-1">
                     <MudTable T="GeothermalData" Items="currentGeothermalProperties.GeothermalDataList" RowStyleFunc="GetRowStyle">
                         <HeaderContent>
@@ -46,6 +46,9 @@
                         </RowTemplate>
                     </MudTable>        
             </MudPaper>
+        </MudItem>
+        <MudItem xs="6">
+            <GeothermalDataScatterPlot Properties="currentGeothermalProperties" />
         </MudItem>
     </MudGrid>
 </MudPaper>

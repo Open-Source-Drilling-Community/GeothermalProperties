@@ -33,7 +33,7 @@
                     <PropertyColumn Property="x => x.Description" Title="Description" CellStyle="width: 40%;" Sortable="true" Editable="false" />
                     <TemplateColumn CellStyle="width: 25%;">
                         <EditTemplate>
-                            <MudIconButton Size="@Size.Small" Icon="@Icons.Material.Outlined.Edit" OnClick="(() => EditGeothermalPropertiesCompletionOrder(context.Item.MetaInfo.ID))" />                                                
+                            <MudIconButton Size="@Size.Small" Icon="@Icons.Material.Outlined.RemoveRedEye" OnClick="(() => ViewGeothermalPropertiesCompletionOrder(context.Item.MetaInfo.ID))" />                                                
                             <MudIconButton Size="@Size.Small" Icon="@Icons.Material.Outlined.Delete" OnClick="(() => DeleteGeothermalPropertiesCompletionOrder(context.Item.MetaInfo.ID))" />
                         </EditTemplate>
                     </TemplateColumn>
@@ -46,7 +46,11 @@
     }
     @if (isHiddenMainPanel && (!isHiddenEditPanel))
     {
-        <GeothermalPropertiesCompletionOrderEdit GeothermalPropertiesList="@geothermalPropertiesList" GeothermalPropertiesCompletionOrderId="@geothermalPropertiesCompletionOrderIdBeingEdited"  ValueChanged="HandleEditPanelClosed" />
+        <GeothermalPropertiesCompletionOrderEdit GeothermalPropertiesList="@geothermalPropertiesList" GeothermalPropertiesCompletionOrderId="@geothermalPropertiesCompletionOrderIdBeingEdited"  ValueChanged="HandleEditAndViewPanelClosed" />
+    }
+    @if (isHiddenMainPanel && (!isHiddenViewPanel))
+    {
+        <GeothermalPropertiesCompletionOrderView GeothermalPropertiesList="@geothermalPropertiesList" GeothermalPropertiesCompletionOrderId="@geothermalPropertiesCompletionOrderIdBeingEdited"  ValueChanged="HandleEditAndViewPanelClosed" />
     }
 </MudUnitAndReferenceChoiceTag>
 
@@ -61,6 +65,7 @@
     // UI related variables
     public bool isHiddenMainPanel;
     public bool isHiddenEditPanel;
+    public bool isHiddenViewPanel;
     private Guid? geothermalPropertiesCompletionOrderIdBeingEdited;
     private string? _searchString;
 
@@ -142,19 +147,22 @@
     {
         isHiddenMainPanel = true;
         isHiddenEditPanel = false;
+        isHiddenViewPanel = true;
         geothermalPropertiesCompletionOrderIdBeingEdited = null;
     }
 
-    private async Task EditGeothermalPropertiesCompletionOrder(Guid id)
+    private async Task ViewGeothermalPropertiesCompletionOrder(Guid id)
     {
         isHiddenMainPanel = true;
-        isHiddenEditPanel = false;
+        isHiddenEditPanel = true;
+        isHiddenViewPanel = false;
         geothermalPropertiesCompletionOrderIdBeingEdited = id;
     }
-    private async Task HandleEditPanelClosed()
+    private async Task HandleEditAndViewPanelClosed()
     {
         isHiddenMainPanel = false;
         isHiddenEditPanel = true;
+        isHiddenViewPanel = true;
         geothermalPropertiesCompletionOrderIdBeingEdited = null;
         await OnInitializedAsync();
     }

@@ -26,7 +26,7 @@
             <MudItem xs="3">
                 @if (GeothermalPropertiesList != null)
                 {
-                    <MudSelect T="GeothermalProperties" @bind-Value="currentGeothermalPropertiesCompletionOrder.ReferenceGeothermalProperties">
+                    <MudSelect T="GeothermalProperties" Label="Geothermal Properties" @bind-Value="currentGeothermalPropertiesCompletionOrder.ReferenceGeothermalProperties">
                         @foreach(GeothermalProperties geothermalProperties in GeothermalPropertiesList)
                         {
                             <MudSelectItem Value="@geothermalProperties">@geothermalProperties.Name</MudSelectItem>

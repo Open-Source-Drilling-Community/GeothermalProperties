@@ -33,7 +33,7 @@
                     <PropertyColumn Property="x => x.Description" Title="Description" CellStyle="width: 40%;" Sortable="true" Editable="false" />
                     <TemplateColumn CellStyle="width: 25%;">
                         <EditTemplate>
-                            <MudIconButton Size="@Size.Small" Icon="@Icons.Material.Outlined.Edit" OnClick="(() => EditGeothermalProperties(context.Item.MetaInfo.ID))" />                                                
+                            <MudIconButton Size="@Size.Small" Icon="@Icons.Material.Outlined.RemoveRedEye" OnClick="(() => ViewGeothermalProperties(context.Item.MetaInfo.ID))" />                                                
                             <MudIconButton Size="@Size.Small" Icon="@Icons.Material.Outlined.Delete" OnClick="(() => DeleteGeothermalProperties(context.Item.MetaInfo.ID))" />
                         </EditTemplate>
                     </TemplateColumn>
@@ -122,7 +122,7 @@
         geothermalPropertiesIdBeingEdited = null;
     }
 
-    private async Task EditGeothermalProperties(Guid id)
+    private async Task ViewGeothermalProperties(Guid id)
     {
         isHiddenMainPanel = true;
         isHiddenEditPanel = false;
