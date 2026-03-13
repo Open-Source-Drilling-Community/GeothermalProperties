@@ -28,6 +28,10 @@ if (!String.IsNullOrEmpty(builder.Configuration["GeothermalPropertiesHostURL"]))
     NORCE.Drilling.GeothermalProperties.WebApp.Configuration.GeothermalPropertiesHostURL = builder.Configuration["GeothermalPropertiesHostURL"];
 if (!String.IsNullOrEmpty(builder.Configuration["UnitConversionHostURL"]))
     NORCE.Drilling.GeothermalProperties.WebApp.Configuration.UnitConversionHostURL = builder.Configuration["UnitConversionHostURL"];
+if (!String.IsNullOrEmpty(builder.Configuration["TrajectoryHostURL"]))
+    NORCE.Drilling.GeothermalProperties.WebApp.Configuration.TrajectoryHostURL = builder.Configuration["TrajectoryHostURL"];
+if (!String.IsNullOrEmpty(builder.Configuration["WellBoreHostURL"]))
+    NORCE.Drilling.GeothermalProperties.WebApp.Configuration.WellBoreHostURL = builder.Configuration["WellBoreHostURL"];
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
