@@ -31,7 +31,7 @@
                 </MudSelect>
             </MudItem>
             <MudItem xs = "3">
-                <MudSelect T="Guid" Value="wellBoreId" Label="Well Bore">
+                <MudSelect T="Guid" @bind-Value="wellBoreId" Label="Well Bore">
                     @foreach (WellBore wellBore in wellBores)
                     {
                         <MudSelectItem Value="@wellBore.MetaInfo.ID">@wellBore.Name</MudSelectItem>
