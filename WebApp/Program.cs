@@ -1,9 +1,10 @@
 using MudBlazor;
 using MudBlazor.Services;
+using NORCE.Drilling.GeothermalProperties.WebApp;
+using NORCE.Drilling.GeothermalProperties.WebPages;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddMudServices(config =>
@@ -18,35 +19,31 @@ builder.Services.AddMudServices(config =>
     config.SnackbarConfiguration.SnackbarVariant = Variant.Filled;
 });
 
+var webPagesConfiguration = new WebPagesHostConfiguration
+{
+    GeothermalPropertiesHostURL = builder.Configuration["GeothermalPropertiesHostURL"],
+    UnitConversionHostURL = builder.Configuration["UnitConversionHostURL"],
+    TrajectoryHostURL = builder.Configuration["TrajectoryHostURL"],
+    WellBoreHostURL = builder.Configuration["WellBoreHostURL"]
+};
+
+builder.Services.AddSingleton<IGeothermalPropertiesWebPagesConfiguration>(webPagesConfiguration);
+builder.Services.AddSingleton<IGeothermalPropertiesAPIUtils, GeothermalPropertiesAPIUtils>();
+
 var app = builder.Build();
 
 app.UseForwardedHeaders();
-// This needs to match with what is defined in "charts/<helm-chart-name>/templates/values.yaml ingress.Path
 app.UsePathBase("/GeothermalProperties/webapp");
 
-if (!String.IsNullOrEmpty(builder.Configuration["GeothermalPropertiesHostURL"]))
-    NORCE.Drilling.GeothermalProperties.WebApp.Configuration.GeothermalPropertiesHostURL = builder.Configuration["GeothermalPropertiesHostURL"];
-if (!String.IsNullOrEmpty(builder.Configuration["UnitConversionHostURL"]))
-    NORCE.Drilling.GeothermalProperties.WebApp.Configuration.UnitConversionHostURL = builder.Configuration["UnitConversionHostURL"];
-if (!String.IsNullOrEmpty(builder.Configuration["TrajectoryHostURL"]))
-    NORCE.Drilling.GeothermalProperties.WebApp.Configuration.TrajectoryHostURL = builder.Configuration["TrajectoryHostURL"];
-if (!String.IsNullOrEmpty(builder.Configuration["WellBoreHostURL"]))
-    NORCE.Drilling.GeothermalProperties.WebApp.Configuration.WellBoreHostURL = builder.Configuration["WellBoreHostURL"];
-
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
-
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
