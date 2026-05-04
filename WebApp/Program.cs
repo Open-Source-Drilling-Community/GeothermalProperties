@@ -33,7 +33,8 @@ builder.Services.AddSingleton<IGeothermalPropertiesAPIUtils, GeothermalPropertie
 var app = builder.Build();
 
 app.UseForwardedHeaders();
-app.UsePathBase("/GeothermalProperties/webapp");
+var basePath = "/geothermalproperties/webapp";
+app.UsePathBase(basePath);
 
 if (!app.Environment.IsDevelopment())
 {
@@ -48,3 +49,4 @@ app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
 app.Run();
+
