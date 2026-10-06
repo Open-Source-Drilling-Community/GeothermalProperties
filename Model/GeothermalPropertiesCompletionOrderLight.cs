@@ -1,5 +1,6 @@
 ﻿using OSDC.DotnetLibraries.General.DataManagement;
 using System;
+using OSDC.DotnetLibraries.Drilling.SemanticCatalogue;
 
 namespace NORCE.Drilling.GeothermalProperties.Model
 {
@@ -8,6 +9,7 @@ namespace NORCE.Drilling.GeothermalProperties.Model
     /// Used to avoid loading the complete GeothermalPropertiesCompletionOrder (heavy weight data) each time we only need contextual info on the data
     /// Typically used for listing, sorting and filtering purposes
     /// </summary>
+    [Semantic(Concepts.CalculationCase)]
     public class GeothermalPropertiesCompletionOrderLight
     {
         /// <summary>

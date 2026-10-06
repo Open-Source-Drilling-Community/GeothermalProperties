@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NORCE.Drilling.GeothermalProperties.Interpolation;
+using OSDC.DotnetLibraries.Drilling.SemanticCatalogue;
 namespace NORCE.Drilling.GeothermalProperties.Model
 {   
 
@@ -38,10 +39,12 @@ namespace NORCE.Drilling.GeothermalProperties.Model
         /// <summary>
         /// an input list of GeothermalProperties
         /// </summary>
+        [Semantic(Concepts.CalculationSpecification, Role = Concepts.CalculationInput)]
         public GeothermalProperties? ReferenceGeothermalProperties { get; set; }
         /// <summary>
         /// an output list of GeothermalProperties
         /// </summary>
+        [Semantic(Concepts.CalculationResult, Role = Concepts.ServerDerivedCalculationResult)]
         public GeothermalProperties? CompletedGeothermalProperties { get; set; }
         /// <summary>
         /// The vertical depth step for interpolation

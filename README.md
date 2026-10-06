@@ -81,3 +81,7 @@ The current work has been funded by the [Research Council of Norway](https://www
 **Andrew Holsaeter**, *NORCE Energy Modelling and Automation*
 
 **Lucas Volpi**, *NORCE Energy Modelling and Automation*
+
+## Persisted calculation-case lifecycle
+
+`GeothermalPropertiesCompletionOrder` is a persisted, immediately evaluated calculation case. OpenAPI uses SemanticCatalogue 0.15.0 to distinguish caller-supplied reference properties, server-derived completion properties, and case retrieval/submission/replacement operations. The light object is a compact case projection rather than asynchronous status.

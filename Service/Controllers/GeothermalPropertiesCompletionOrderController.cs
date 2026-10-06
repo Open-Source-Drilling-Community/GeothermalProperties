@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using OSDC.DotnetLibraries.General.DataManagement;
 using NORCE.Drilling.GeothermalProperties.Service.Managers;
+using OSDC.DotnetLibraries.Drilling.SemanticCatalogue;
 
 namespace NORCE.Drilling.GeothermalProperties.Service.Controllers
 {
@@ -26,6 +27,7 @@ namespace NORCE.Drilling.GeothermalProperties.Service.Controllers
         /// </summary>
         /// <returns>the list of Guid of all GeothermalPropertiesCompletionOrder present in the microservice database at endpoint GeothermalProperties/api/GeothermalPropertiesCompletionOrder</returns>
         [HttpGet(Name = "GetAllGeothermalPropertiesCompletionOrderId")]
+        [Semantic(Concepts.CalculationCase, Role = Concepts.CalculationCaseRetrieval)]
         public ActionResult<IEnumerable<Guid>> GetAllGeothermalPropertiesCompletionOrderId()
         {
             var ids = _geothermalPropertiesCompletionOrderManager.GetAllGeothermalPropertiesCompletionOrderId();
@@ -44,6 +46,7 @@ namespace NORCE.Drilling.GeothermalProperties.Service.Controllers
         /// </summary>
         /// <returns>the list of MetaInfo of all GeothermalPropertiesCompletionOrder present in the microservice database, at endpoint GeothermalProperties/api/GeothermalPropertiesCompletionOrder/MetaInfo</returns>
         [HttpGet("MetaInfo", Name = "GetAllGeothermalPropertiesCompletionOrderMetaInfo")]
+        [Semantic(Concepts.CalculationCase, Role = Concepts.CalculationCaseRetrieval)]
         public ActionResult<IEnumerable<MetaInfo>> GetAllGeothermalPropertiesCompletionOrderMetaInfo()
         {
             var vals = _geothermalPropertiesCompletionOrderManager.GetAllGeothermalPropertiesCompletionOrderMetaInfo();
@@ -63,6 +66,7 @@ namespace NORCE.Drilling.GeothermalProperties.Service.Controllers
         /// <param name="guid"></param>
         /// <returns>the GeothermalPropertiesCompletionOrder identified by its Guid from the microservice database, at endpoint GeothermalProperties/api/GeothermalPropertiesCompletionOrder/id</returns>
         [HttpGet("{id}", Name = "GetGeothermalPropertiesCompletionOrderById")]
+        [Semantic(Concepts.CalculationCase, Role = Concepts.CalculationCaseRetrieval)]
         public ActionResult<Model.GeothermalPropertiesCompletionOrder?> GetGeothermalPropertiesCompletionOrderById(Guid id)
         {
             if (!id.Equals(Guid.Empty))
@@ -88,6 +92,7 @@ namespace NORCE.Drilling.GeothermalProperties.Service.Controllers
         /// </summary>
         /// <returns>the list of all GeothermalPropertiesCompletionOrderLight present in the microservice database, at endpoint GeothermalProperties/api/GeothermalPropertiesCompletionOrder/LightData</returns>
         [HttpGet("LightData", Name = "GetAllGeothermalPropertiesCompletionOrderLight")]
+        [Semantic(Concepts.CalculationCase, Role = Concepts.CalculationCaseRetrieval)]
         public ActionResult<IEnumerable<Model.GeothermalPropertiesCompletionOrderLight>> GetAllGeothermalPropertiesCompletionOrderLight()
         {
             var vals = _geothermalPropertiesCompletionOrderManager.GetAllGeothermalPropertiesCompletionOrderLight();
@@ -106,6 +111,7 @@ namespace NORCE.Drilling.GeothermalProperties.Service.Controllers
         /// </summary>
         /// <returns>the list of all GeothermalPropertiesCompletionOrder present in the microservice database, at endpoint GeothermalProperties/api/GeothermalPropertiesCompletionOrder/HeavyData</returns>
         [HttpGet("HeavyData", Name = "GetAllGeothermalPropertiesCompletionOrder")]
+        [Semantic(Concepts.CalculationCase, Role = Concepts.CalculationCaseRetrieval)]
         public ActionResult<IEnumerable<Model.GeothermalPropertiesCompletionOrder?>> GetAllGeothermalPropertiesCompletionOrder()
         {
             var vals = _geothermalPropertiesCompletionOrderManager.GetAllGeothermalPropertiesCompletionOrder();
@@ -125,6 +131,7 @@ namespace NORCE.Drilling.GeothermalProperties.Service.Controllers
         /// <param name="geothermalPropertiesCompletionOrder"></param>
         /// <returns>true if the given GeothermalPropertiesCompletionOrder has been added successfully to the microservice database, at the endpoint GeothermalProperties/api/GeothermalPropertiesCompletionOrder</returns>
         [HttpPost(Name = "PostGeothermalPropertiesCompletionOrder")]
+        [Semantic(Concepts.CalculationCase, Role = Concepts.ImmediateCalculationSubmission)]
         public ActionResult PostGeothermalPropertiesCompletionOrder([FromBody] Model.GeothermalPropertiesCompletionOrder? data)
         {
             // Check if geothermalPropertiesCompletionOrder exists in the database through ID
@@ -163,6 +170,7 @@ namespace NORCE.Drilling.GeothermalProperties.Service.Controllers
         /// <param name="geothermalPropertiesCompletionOrder"></param>
         /// <returns>true if the given GeothermalPropertiesCompletionOrder has been updated successfully to the microservice database, at the endpoint GeothermalProperties/api/GeothermalPropertiesCompletionOrder/id</returns>
         [HttpPut("{id}", Name = "PutGeothermalPropertiesCompletionOrderById")]
+        [Semantic(Concepts.CalculationCase, Role = Concepts.ImmediateCalculationReplacement)]
         public ActionResult PutGeothermalPropertiesCompletionOrderById(Guid id, [FromBody] Model.GeothermalPropertiesCompletionOrder? data)
         {
             // Check if GeothermalPropertiesCompletionOrder is in the data base
