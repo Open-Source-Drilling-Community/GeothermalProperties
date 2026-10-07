@@ -44,4 +44,4 @@ The current work has been funded by the [Research Council of Norway](https://www
 
 ## Calculation lifecycle semantics
 
-Generated OpenAPI carries SemanticCatalogue 0.15.0 `x-osdc-semantic` metadata for completion-order case retrieval, immediate submission and immediate replacement, together with input and result roles.
+Generated OpenAPI carries SemanticCatalogue 0.16.0 `x-osdc-semantic` metadata for completion-order case retrieval, immediate submission, immediate replacement and case deletion, together with input and result roles.

@@ -207,6 +207,7 @@ namespace NORCE.Drilling.GeothermalProperties.Service.Controllers
         /// <param name="guid"></param>
         /// <returns>true if the GeothermalPropertiesCompletionOrder was deleted from the microservice database, at the endpoint GeothermalProperties/api/GeothermalPropertiesCompletionOrder/id</returns>
         [HttpDelete("{id}", Name = "DeleteGeothermalPropertiesCompletionOrderById")]
+        [Semantic(Concepts.CalculationCase, Role = Concepts.CalculationCaseDeletion)]
         public ActionResult DeleteGeothermalPropertiesCompletionOrderById(Guid id)
         {
             if (_geothermalPropertiesCompletionOrderManager.GetGeothermalPropertiesCompletionOrderById(id) != null)

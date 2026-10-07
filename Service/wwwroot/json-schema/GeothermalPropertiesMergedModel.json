@@ -225,7 +225,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:calculation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-model-attribute",
@@ -272,7 +272,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:calculation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-model-attribute",
@@ -312,7 +312,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:calculation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-model-attribute",
@@ -360,7 +360,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:calculation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-model-attribute",
@@ -418,7 +418,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:calculation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-model-attribute",
@@ -454,6 +454,23 @@
           "200": {
             "description": "OK"
           }
+        },
+        "x-osdc-semantic": {
+          "catalogue": "urn:osdc:semantic-catalogue",
+          "catalogueVersion": "0.16.0",
+          "concept": "urn:osdc:semantic:calculation-case",
+          "curationStatus": "Reviewed",
+          "assertionSource": "provider-model-attribute",
+          "role": "urn:osdc:semantic:calculation-case-deletion",
+          "requiredContext": [
+            "owning service",
+            "resource type"
+          ],
+          "constraints": [
+            "Callers supply the calculation specification; lifecycle facts and results are derived by the service unless a narrower contract explicitly states otherwise.",
+            "An immediate calculation need not expose polling or progress when it completes in the submission or replacement response.",
+            "A queued calculation should expose a lightweight status projection until it reaches a terminal state."
+          ]
         }
       }
     },
@@ -480,7 +497,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:calculation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-model-attribute",
@@ -520,7 +537,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:calculation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-model-attribute",
@@ -9177,7 +9194,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:global-anti-collision-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -9225,7 +9242,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:global-anti-collision-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -9266,7 +9283,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:global-anti-collision-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -9324,7 +9341,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:global-anti-collision-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -9385,7 +9402,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:global-anti-collision-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -9421,7 +9438,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:interpolated-trajectory",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -9463,7 +9480,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:interpolated-trajectory",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -9498,7 +9515,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:interpolated-trajectory",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -9549,7 +9566,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:interpolated-trajectory",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -9611,7 +9628,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:interpolated-trajectory",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -9686,7 +9703,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:interpolated-trajectory",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -9738,7 +9755,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:interpolated-trajectory",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -9781,7 +9798,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:interpolated-trajectory",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -9816,7 +9833,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:interpolated-trajectory",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -9851,7 +9868,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:interpolated-trajectory",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -11222,7 +11239,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:minimum-distance-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -11264,7 +11281,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:minimum-distance-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -11299,7 +11316,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:minimum-distance-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -11350,7 +11367,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:minimum-distance-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -11412,7 +11429,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:minimum-distance-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -11487,7 +11504,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:minimum-distance-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -11539,7 +11556,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:minimum-distance-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -11574,7 +11591,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:minimum-distance-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -11609,7 +11626,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:minimum-distance-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -11645,7 +11662,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:survey-station-ellipse-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -11694,7 +11711,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:survey-station-ellipse-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -11729,7 +11746,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:survey-station-ellipse-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -11772,7 +11789,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:survey-station-ellipse-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -12591,7 +12608,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-aggregation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -12633,7 +12650,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-aggregation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -12668,7 +12685,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-aggregation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -12719,7 +12736,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-aggregation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -12781,7 +12798,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-aggregation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -12872,7 +12889,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-aggregation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -12925,7 +12942,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-aggregation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -12986,7 +13003,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-aggregation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -13039,7 +13056,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-aggregation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -13100,7 +13117,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-aggregation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -13153,7 +13170,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-aggregation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -13214,7 +13231,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-aggregation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -13249,7 +13266,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-aggregation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -13284,7 +13301,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-aggregation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -13744,7 +13761,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:minimum-distance-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -13786,7 +13803,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:minimum-distance-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -13821,7 +13838,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:minimum-distance-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -13872,7 +13889,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:minimum-distance-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -13934,7 +13951,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:minimum-distance-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -14009,7 +14026,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:minimum-distance-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -14061,7 +14078,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:minimum-distance-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -14096,7 +14113,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:minimum-distance-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -14131,7 +14148,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:minimum-distance-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -14167,7 +14184,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-realization-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -14209,7 +14226,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-realization-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -14244,7 +14261,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-realization-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -14295,7 +14312,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-realization-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -14357,7 +14374,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-realization-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -14423,7 +14440,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-realization-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -14458,7 +14475,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-realization-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -14502,7 +14519,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-realization-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -14554,7 +14571,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-realization-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -16946,7 +16963,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:directional-control-evaluation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -16995,7 +17012,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:directional-control-evaluation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -17030,7 +17047,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:directional-control-evaluation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -17073,7 +17090,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:directional-control-evaluation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -17142,7 +17159,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:directional-control-evaluation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -17216,7 +17233,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:directional-control-evaluation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -17260,7 +17277,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:directional-control-evaluation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -17312,7 +17329,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:directional-control-evaluation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -17612,7 +17629,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:survey-station-ellipse-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -17674,7 +17691,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:survey-station-ellipse-calculation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -17710,7 +17727,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:target-landing-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -17759,7 +17776,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:target-landing-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -17794,7 +17811,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:target-landing-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -17829,7 +17846,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:target-landing-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -17864,7 +17881,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:target-landing-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -17907,7 +17924,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:target-landing-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -17976,7 +17993,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:target-landing-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -18050,7 +18067,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:target-landing-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -18093,7 +18110,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:target-landing-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -18136,7 +18153,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:target-landing-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -18179,7 +18196,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:target-landing-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -18215,7 +18232,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-extrapolation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -18284,7 +18301,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-extrapolation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -18319,7 +18336,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-extrapolation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -18354,7 +18371,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-extrapolation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -18389,7 +18406,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-extrapolation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -18460,7 +18477,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-extrapolation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -18539,7 +18556,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-extrapolation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -18623,7 +18640,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-extrapolation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -18667,7 +18684,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-extrapolation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -18719,7 +18736,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-extrapolation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -18842,7 +18859,7 @@
             ],
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-specification",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -18861,7 +18878,7 @@
             ],
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-result",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -18882,7 +18899,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:calculation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-model-attribute",
@@ -18924,7 +18941,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:calculation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-model-attribute",
@@ -18963,7 +18980,7 @@
             "format": "uuid",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -18996,7 +19013,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:resource-metadata",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -31516,7 +31533,7 @@
             "format": "uuid",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -31536,7 +31553,7 @@
             "format": "uuid",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -31556,7 +31573,7 @@
             "format": "date-time",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:instant",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -31578,7 +31595,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:instant",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -31602,7 +31619,7 @@
             "description": "Discriminator identifying whether the authoritative drill-floor depth belongs to the referenced rig or to the rig-job entry.",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:drill-floor-depth-source",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -31627,7 +31644,7 @@
             "description": "Vertical depth coordinate locating the drill floor relative to the declared vertical reference. GaussianValue.Mean is the expected value in SI metres (m), Relative to the WGS84 ellipsoid, positive downward. StandardDeviation is a non-negative standard uncertainty in SI metres (m); it has no coordinate origin. MinValue and MaxValue are provider domain-limit metadata in the mean's unit and reference, not confidence limits or instructions to truncate the Gaussian distribution.",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:gaussian-uncertain-value",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -31645,7 +31662,7 @@
             "x-osdc-semantic-bindings": {
               "/GaussianValue/Mean": {
                 "catalogue": "urn:osdc:semantic-catalogue",
-                "catalogueVersion": "0.15.0",
+                "catalogueVersion": "0.16.0",
                 "concept": "urn:osdc:semantic:drill-floor-depth",
                 "curationStatus": "Reviewed",
                 "assertionSource": "provider-binding-registry",
@@ -31682,7 +31699,7 @@
               },
               "/GaussianValue/StandardDeviation": {
                 "catalogue": "urn:osdc:semantic-catalogue",
-                "catalogueVersion": "0.15.0",
+                "catalogueVersion": "0.16.0",
                 "concept": "urn:osdc:semantic:linear-standard-uncertainty",
                 "curationStatus": "Reviewed",
                 "assertionSource": "provider-binding-registry",
@@ -31710,7 +31727,7 @@
               },
               "/GaussianValue/MinValue": {
                 "catalogue": "urn:osdc:semantic-catalogue",
-                "catalogueVersion": "0.15.0",
+                "catalogueVersion": "0.16.0",
                 "concept": "urn:osdc:semantic:drill-floor-depth",
                 "curationStatus": "Reviewed",
                 "assertionSource": "provider-binding-registry",
@@ -31747,7 +31764,7 @@
               },
               "/GaussianValue/MaxValue": {
                 "catalogue": "urn:osdc:semantic-catalogue",
-                "catalogueVersion": "0.15.0",
+                "catalogueVersion": "0.16.0",
                 "concept": "urn:osdc:semantic:drill-floor-depth",
                 "curationStatus": "Reviewed",
                 "assertionSource": "provider-binding-registry",
@@ -31787,7 +31804,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:rig-job",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-model-attribute",
@@ -31871,7 +31888,7 @@
             "description": "Identity and service-location metadata accompanying a managed resource; a locator is not the semantic identity.",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-metadata",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -31885,7 +31902,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-name",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -31899,7 +31916,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-description",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -31914,7 +31931,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:instant",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -31936,7 +31953,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:instant",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -31958,7 +31975,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -31980,7 +31997,7 @@
             "deprecated": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -32006,7 +32023,7 @@
             "description": "Boolean declaration that a wellbore is a branch of a parent wellbore.",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:sidetrack-flag",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -32024,7 +32041,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -32047,7 +32064,7 @@
             "description": "Along-hole coordinate of a sidetrack tie-in on the parent wellbore path, using the applicable reference convention. GaussianValue.Mean is the expected value in SI metres (m), Along the parent wellbore identified by ParentWellBoreID, using the OSDC WGS84 path-intersection along-hole convention; this is not a vertical depth. StandardDeviation is a non-negative standard uncertainty in SI metres (m); it has no coordinate origin. MinValue and MaxValue are provider domain-limit metadata in the mean's unit and reference, not confidence limits or instructions to truncate the Gaussian distribution.",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:gaussian-uncertain-value",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -32065,7 +32082,7 @@
             "x-osdc-semantic-bindings": {
               "/GaussianValue/Mean": {
                 "catalogue": "urn:osdc:semantic-catalogue",
-                "catalogueVersion": "0.15.0",
+                "catalogueVersion": "0.16.0",
                 "concept": "urn:osdc:semantic:tie-in-along-hole-depth",
                 "curationStatus": "Reviewed",
                 "assertionSource": "provider-binding-registry",
@@ -32114,7 +32131,7 @@
               },
               "/GaussianValue/StandardDeviation": {
                 "catalogue": "urn:osdc:semantic-catalogue",
-                "catalogueVersion": "0.15.0",
+                "catalogueVersion": "0.16.0",
                 "concept": "urn:osdc:semantic:linear-standard-uncertainty",
                 "curationStatus": "Reviewed",
                 "assertionSource": "provider-binding-registry",
@@ -32142,7 +32159,7 @@
               },
               "/GaussianValue/MinValue": {
                 "catalogue": "urn:osdc:semantic-catalogue",
-                "catalogueVersion": "0.15.0",
+                "catalogueVersion": "0.16.0",
                 "concept": "urn:osdc:semantic:tie-in-along-hole-depth",
                 "curationStatus": "Reviewed",
                 "assertionSource": "provider-binding-registry",
@@ -32191,7 +32208,7 @@
               },
               "/GaussianValue/MaxValue": {
                 "catalogue": "urn:osdc:semantic-catalogue",
-                "catalogueVersion": "0.15.0",
+                "catalogueVersion": "0.16.0",
                 "concept": "urn:osdc:semantic:tie-in-along-hole-depth",
                 "curationStatus": "Reviewed",
                 "assertionSource": "provider-binding-registry",
@@ -32260,7 +32277,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:wellbore",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-model-attribute",
@@ -32305,7 +32322,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-name",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -32319,7 +32336,7 @@
             "format": "uuid",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -32339,7 +32356,7 @@
             "format": "uuid",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -32535,7 +32552,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-name",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -32549,7 +32566,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-description",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -32659,7 +32676,7 @@
             "format": "uuid",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -32680,7 +32697,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -32701,7 +32718,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -32756,7 +32773,7 @@
             "format": "uuid",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -32781,7 +32798,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -32806,7 +32823,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -32831,7 +32848,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:instant",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -32857,7 +32874,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:instant",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -32879,7 +32896,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:feature-assignment",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-model-attribute",
@@ -32906,7 +32923,7 @@
             "description": "Identity and service-location metadata accompanying a managed resource; a locator is not the semantic identity.",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-metadata",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -32924,7 +32941,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-name",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -32941,7 +32958,7 @@
             "description": "Boolean rule declaring that at most one category assignment may be active on a resource at the same instant.",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:category-exclusivity",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -32964,7 +32981,7 @@
             "description": "Boolean rule indicating whether assignments in a category may carry validity bounds.",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:category-validity-period-enabled",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -32992,7 +33009,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:instant",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -33018,7 +33035,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:instant",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -33040,7 +33057,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:feature-category",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-model-attribute",
@@ -33060,7 +33077,7 @@
             "format": "uuid",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -33084,7 +33101,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-name",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -33099,7 +33116,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:feature-option",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-model-attribute",
@@ -33121,7 +33138,7 @@
             "description": "Identity and service-location metadata accompanying a managed resource; a locator is not the semantic identity.",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-metadata",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -33139,7 +33156,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-name",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -33158,7 +33175,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:instant",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -33184,7 +33201,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:instant",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -33206,7 +33223,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:resource-identity-definition",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-model-attribute",
@@ -33228,7 +33245,7 @@
             "format": "uuid",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -33253,7 +33270,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -33277,7 +33294,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identity-value",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -33297,7 +33314,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:resource-identity-assignment",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-model-attribute",
@@ -33397,7 +33414,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -33419,7 +33436,7 @@
             "deprecated": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -33445,7 +33462,7 @@
             "description": "Boolean declaration that a wellbore is a branch of a parent wellbore.",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:sidetrack-flag",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -33463,7 +33480,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:resource-identifier",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -33486,7 +33503,7 @@
             "description": "Along-hole coordinate of a sidetrack tie-in on the parent wellbore path, using the applicable reference convention. GaussianValue.Mean is the expected value in SI metres (m), Along the parent wellbore identified by ParentWellBoreID, using the OSDC WGS84 path-intersection along-hole convention; this is not a vertical depth. StandardDeviation is a non-negative standard uncertainty in SI metres (m); it has no coordinate origin. MinValue and MaxValue are provider domain-limit metadata in the mean's unit and reference, not confidence limits or instructions to truncate the Gaussian distribution.",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:gaussian-uncertain-value",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-model-attribute",
@@ -33504,7 +33521,7 @@
             "x-osdc-semantic-bindings": {
               "/GaussianValue/Mean": {
                 "catalogue": "urn:osdc:semantic-catalogue",
-                "catalogueVersion": "0.15.0",
+                "catalogueVersion": "0.16.0",
                 "concept": "urn:osdc:semantic:tie-in-along-hole-depth",
                 "curationStatus": "Reviewed",
                 "assertionSource": "provider-binding-registry",
@@ -33553,7 +33570,7 @@
               },
               "/GaussianValue/StandardDeviation": {
                 "catalogue": "urn:osdc:semantic-catalogue",
-                "catalogueVersion": "0.15.0",
+                "catalogueVersion": "0.16.0",
                 "concept": "urn:osdc:semantic:linear-standard-uncertainty",
                 "curationStatus": "Reviewed",
                 "assertionSource": "provider-binding-registry",
@@ -33581,7 +33598,7 @@
               },
               "/GaussianValue/MinValue": {
                 "catalogue": "urn:osdc:semantic-catalogue",
-                "catalogueVersion": "0.15.0",
+                "catalogueVersion": "0.16.0",
                 "concept": "urn:osdc:semantic:tie-in-along-hole-depth",
                 "curationStatus": "Reviewed",
                 "assertionSource": "provider-binding-registry",
@@ -33630,7 +33647,7 @@
               },
               "/GaussianValue/MaxValue": {
                 "catalogue": "urn:osdc:semantic-catalogue",
-                "catalogueVersion": "0.15.0",
+                "catalogueVersion": "0.16.0",
                 "concept": "urn:osdc:semantic:tie-in-along-hole-depth",
                 "curationStatus": "Reviewed",
                 "assertionSource": "provider-binding-registry",
@@ -47845,7 +47862,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:riemannian-north",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -47870,7 +47887,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:riemannian-east",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -47898,7 +47915,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:geodetic-latitude",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -47922,7 +47939,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:geodetic-longitude",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -47956,7 +47973,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:wellbore-inclination",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -48260,7 +48277,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:confidence-factor",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -48286,7 +48303,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:anti-collision-policy-revision",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -48322,7 +48339,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:confidence-factor",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -48369,7 +48386,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:separation-factor",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -48395,7 +48412,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:separation-factor",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -48519,7 +48536,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:field-anti-collision-policy-assignment",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -48572,7 +48589,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:wellbore-curvature",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -48608,7 +48625,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:build-rate",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -48631,7 +48648,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:turn-rate",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -48665,7 +48682,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:wellbore-curvature",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -48686,7 +48703,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:toolface",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -48721,7 +48738,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:departure-distance",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -48745,7 +48762,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:wellbore-azimuth",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -48866,7 +48883,7 @@
             ],
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:curvature-residual",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -48892,7 +48909,7 @@
             ],
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:toolface-residual",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -48918,7 +48935,7 @@
             ],
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:build-rate-residual",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -48944,7 +48961,7 @@
             ],
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:turn-rate-residual",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49007,7 +49024,7 @@
             ],
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-state",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49019,7 +49036,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-progress",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49039,7 +49056,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-diagnostic-message",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49118,7 +49135,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:directional-control-evaluation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -49171,7 +49188,7 @@
             ],
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-state",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49183,7 +49200,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-progress",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49203,7 +49220,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-diagnostic-message",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49216,7 +49233,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:directional-control-evaluation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -49279,7 +49296,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:curvature-residual",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49313,7 +49330,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:toolface-residual",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49347,7 +49364,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:build-rate-residual",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49381,7 +49398,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:turn-rate-residual",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49402,7 +49419,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:directional-control-evaluation-sample",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -49444,7 +49461,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:calculation-result-chunk",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -49463,7 +49480,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:lower-bound",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49478,7 +49495,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:upper-bound",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49509,7 +49526,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:measured-depth",
               "curationStatus": "Deprecated",
               "assertionSource": "provider-binding-registry",
@@ -49564,7 +49581,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:physical-length-extent",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49631,7 +49648,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:measured-depth",
               "curationStatus": "Deprecated",
               "assertionSource": "provider-binding-registry",
@@ -49662,7 +49679,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:ellipsoidal-depth",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49690,7 +49707,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:wellbore-inclination",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49717,7 +49734,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:wellbore-azimuth",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49790,7 +49807,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:measured-depth",
               "curationStatus": "Deprecated",
               "assertionSource": "provider-binding-registry",
@@ -49827,7 +49844,7 @@
         "description": "North reference for an observed clockwise azimuth. TrueNorth is WGS84 geodetic north projected onto the plane perpendicular to the selected vertical; MagneticNorth is the evaluated geomagnetic-field vector projected onto that plane; InheritRun uses the survey run default.",
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:survey-azimuth-reference",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -49879,7 +49896,7 @@
         "description": "Reference vertical for an observed inclination. GeodeticVertical is the local positive-down axis perpendicular to the WGS84 ellipsoid (opposite its outward normal); GravityVertical follows the local total-gravity vector; InheritRun uses the survey run default.",
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:survey-inclination-reference",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -49906,7 +49923,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:applied-inclination-correction",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49931,7 +49948,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:applied-azimuth-correction",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49957,7 +49974,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:magnetic-declination",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -49985,7 +50002,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:total-gravity-acceleration",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50012,7 +50029,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:total-gravity-acceleration",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50039,7 +50056,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:total-gravity-acceleration",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50066,7 +50083,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:geodetic-latitude",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50093,7 +50110,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:geodetic-longitude",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50120,7 +50137,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:ellipsoidal-depth",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50186,7 +50203,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:survey-measurement-correction",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -50204,7 +50221,7 @@
         "type": "string",
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:survey-measurement-origin",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -50232,7 +50249,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:distance-to-bit",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50256,7 +50273,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:survey-run-bit-extrapolation",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -50327,7 +50344,7 @@
             ],
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-state",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50339,7 +50356,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-progress",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50359,7 +50376,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-diagnostic-message",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50379,7 +50396,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:measured-depth",
               "curationStatus": "Deprecated",
               "assertionSource": "provider-binding-registry",
@@ -50412,7 +50429,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:confidence-factor",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50436,7 +50453,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:wellbore-curvature",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50482,7 +50499,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:geological-target-boundary",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50507,7 +50524,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:driller-target-boundary",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50532,7 +50549,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:reachable-target-boundary",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50586,7 +50603,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:target-landing-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -50641,7 +50658,7 @@
             ],
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-state",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50653,7 +50670,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-progress",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50673,7 +50690,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-diagnostic-message",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50686,7 +50703,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:target-landing-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -50717,7 +50734,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:wellbore-inclination",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50745,7 +50762,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:wellbore-curvature",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50767,7 +50784,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:toolface",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50792,7 +50809,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:build-rate",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50816,7 +50833,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:turn-rate",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50883,7 +50900,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:north-component",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50895,7 +50912,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:east-component",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -50957,7 +50974,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:target-landing-sample",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -51016,7 +51033,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:physical-length-extent",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -51040,7 +51057,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:physical-length-extent",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -51099,7 +51116,7 @@
             ],
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-state",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -51111,7 +51128,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-progress",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -51131,7 +51148,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-diagnostic-message",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -51143,7 +51160,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:trajectory-interpolation-interval",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -51204,7 +51221,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-extrapolation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -51253,7 +51270,7 @@
             ],
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-state",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -51265,7 +51282,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-progress",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -51285,7 +51302,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:calculation-diagnostic-message",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -51295,7 +51312,7 @@
         },
         "x-osdc-semantic": {
           "catalogue": "urn:osdc:semantic-catalogue",
-          "catalogueVersion": "0.15.0",
+          "catalogueVersion": "0.16.0",
           "concept": "urn:osdc:semantic:trajectory-extrapolation-case",
           "curationStatus": "Reviewed",
           "assertionSource": "provider-binding-registry",
@@ -51356,7 +51373,7 @@
             "format": "double",
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:physical-length-extent",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
@@ -51467,7 +51484,7 @@
             "nullable": true,
             "x-osdc-semantic": {
               "catalogue": "urn:osdc:semantic-catalogue",
-              "catalogueVersion": "0.15.0",
+              "catalogueVersion": "0.16.0",
               "concept": "urn:osdc:semantic:physical-length-extent",
               "curationStatus": "Reviewed",
               "assertionSource": "provider-binding-registry",
